@@ -1,0 +1,43 @@
+---
+// src/components/Carro.astro
+const { modelo, preco, imagem } = Astro.props;
+---
+
+<div class="carro-card">
+  <img src={imagem} alt={modelo} />
+  <h3>{modelo}</h3>
+  <p>{preco}</p>
+  <button>Reservar</button>
+</div>
+
+<style>
+  .carro-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    text-align: center;
+    margin: 16px;
+    transition: transform 0.2s;
+  }
+  
+  .carro-card:hover {
+    transform: scale(1.05);
+  }
+
+  img {
+    max-width: 100%;
+    border-radius: 4px;
+  }
+
+  button {
+    background-color: #ffcc00;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+
+  button:hover {
+    background-color: #e6b800;
+  }
+</style>
